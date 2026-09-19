@@ -1,0 +1,915 @@
+/* =========================
+   General Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eee8f2;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.instagram-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+
+/* =========================
+   Instagram Screens
+========================= */
+
+.screen {
+    width: 220px;
+    height: 440px;
+    background-color: white;
+    border: 7px solid #111;
+    border-radius: 28px;
+    overflow: hidden;
+     position: relative;
+}
+/* =========================
+   Screen 1 - Profile Header
+========================= */
+
+.profile-screen {
+    background-color: #ffffff;
+}
+
+/* =========================
+   Profile Information
+========================= */
+
+.profile-info {
+    padding: 12px 10px 8px;
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* Profile Picture */
+
+.profile-picture {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #ffb6c8, #e95791);
+    flex-shrink: 0;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Profile Statistics */
+
+.profile-stats {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.stat strong {
+    font-size: 11px;
+}
+
+.stat span {
+    font-size: 7px;
+    color: #555555;
+}
+
+
+/* =========================
+   Profile Details
+========================= */
+
+.profile-details {
+    margin-top: 8px;
+}
+
+.profile-details h2 {
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
+.profile-details p {
+    font-size: 7px;
+    line-height: 1.5;
+    color: #444444;
+}
+
+
+/* =========================
+   Profile Buttons
+========================= */
+
+.profile-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.profile-buttons button {
+    flex: 1;
+    padding: 5px 2px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+    font-size: 7px;
+    cursor: pointer;
+}
+
+.profile-buttons button:first-child {
+    background-color: #f47ca6;
+    color: white;
+    border-color: #f47ca6;
+}
+
+
+/* =========================
+   Story Highlights
+========================= */
+
+.highlights {
+    display: flex;
+    gap: 12px;
+    padding: 4px 10px 10px;
+    overflow: hidden;
+}
+
+.highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    min-width: 38px;
+}
+
+.highlight-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #eeeeee;
+    background: linear-gradient(135deg, #f7b7c9, #b55ba5);
+}
+
+.highlight span {
+    font-size: 6px;
+    color: #444444;
+}
+/* =========================
+   Profile Posts Grid
+========================= */
+
+.profile-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 2px;
+     padding-bottom: 38px;
+}
+
+.post {
+    height: 58px;
+    background: linear-gradient(
+        135deg,
+        #ffd28f,
+        #f57bb5,
+        #a95bb8
+    );
+}
+
+
+/* Different shades for posts */
+
+.post-2 {
+    background: linear-gradient(
+        135deg,
+        #f9b5a7,
+        #ef75ae
+    );
+}
+
+.post-3 {
+    background: linear-gradient(
+        135deg,
+        #ffcf91,
+        #c36ab2
+    );
+}
+
+.post-4 {
+    background: linear-gradient(
+        135deg,
+        #f6a7bc,
+        #d65aa6
+    );
+}
+
+.post-5 {
+    background: linear-gradient(
+        135deg,
+        #ffd08c,
+        #e86aaa
+    );
+}
+
+.post-6 {
+    background: linear-gradient(
+        135deg,
+        #e982bd,
+        #9b65b5
+    );
+}
+
+.post-7 {
+    background: linear-gradient(
+        135deg,
+        #ffbd9d,
+        #ed6eae
+    );
+}
+
+.post-8 {
+    background: linear-gradient(
+        135deg,
+        #ee79b4,
+        #b65cae
+    );
+}
+
+.post-9 {
+    background: linear-gradient(
+        135deg,
+        #f5a2bf,
+        #9561ad
+    );
+}
+/* =========================
+   Common Top Bar
+========================= */
+
+.top-bar {
+    background-color: #ffffff;
+}
+
+.status-bar {
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.status-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.status-icons svg {
+    width: 9px;
+    height: 9px;
+
+    fill: none;
+    stroke: #222222;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Instagram App Header */
+
+.app-header {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.instagram-logo {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+
+/* =========================
+   Common Bottom Navigation
+========================= */
+
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #ffffff;
+    border-top: 1px solid #eeeeee;
+
+    z-index: 10;
+}
+
+.nav-item {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: #888888;
+}
+
+.nav-item svg {
+    width: 15px;
+    height: 15px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Active icon */
+.nav-item.active {
+    color: #111111;
+}
+
+.nav-item.active svg {
+    stroke-width: 2.4;
+}
+/* =========================
+   Screen 2 Heart Notification
+========================= */
+
+.reaction-nav {
+    position: relative;
+}
+
+.reaction-bubble {
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 17px;
+    min-width: 34px;
+    padding: 0 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    background-color: #e94b6c;
+    border-radius: 5px;
+}
+
+/* Small pointer under the bubble */
+.reaction-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #e94b6c;
+}
+
+/* White filled icons inside the bubble */
+.reaction-bubble .bubble-icon {
+    width: 10px;
+    height: 10px;
+
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+}
+/* =========================
+   Screen 2 - Stories
+========================= */
+
+.stories {
+    display: flex;
+    gap: 9px;
+    padding: 8px 8px 7px;
+    overflow: hidden;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.story {
+    min-width: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.story-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #f06b9c;
+    background: linear-gradient(
+        135deg,
+        #ffd18e,
+        #f36fa9,
+        #a95bb8
+    );
+}
+
+.story span {
+    font-size: 5.5px;
+    white-space: nowrap;
+}
+
+.your-story {
+    position: relative;
+    overflow: visible;
+    padding: 2px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd18e,
+        #f36fa9,
+        #a95bb8
+    );
+}
+
+.your-story img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.your-story > span {
+    position: absolute;
+    right: -2px;
+    bottom: -1px;
+
+    width: 11px;
+    height: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2589e8;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    font-size: 8px;
+}
+.notification-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-icon svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+    stroke: #333333;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: #e94b6c;
+    border-radius: 50%;
+}
+/* =========================
+   Feed Post
+========================= */
+
+.feed-post {
+    background-color: #ffffff;
+}
+
+.post-header {
+    height: 34px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8px;
+}
+
+.post-user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.small-profile-picture {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ffb5c8,
+        #e76a9e
+    );
+
+    border: 1px solid #f08aae;
+}
+
+.post-user strong {
+    font-size: 7px;
+}
+
+.post-menu {
+    font-size: 13px;
+}
+.feed-post-image {
+    width: 100%;
+    height: 125px;
+
+    background: linear-gradient(
+        135deg,
+        #ffb98d,
+        #f55eaa,
+        #a55ab6
+    );
+}
+/* =========================
+   Post Actions
+========================= */
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 6px 8px 3px;
+}
+
+.left-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.action-icon {
+    width: 18px;
+    height: 18px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.action-icon svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+    stroke: #222222;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Filled red Like */
+.action-icon.liked svg {
+    fill: #e94b6c;
+    stroke: #e94b6c;
+}
+/* =========================
+   Post Details
+========================= */
+
+.post-details {
+    padding: 0 8px;
+}
+
+.post-details > strong {
+    display: block;
+    font-size: 7px;
+    margin-bottom: 5px;
+}
+
+.post-details p {
+    font-size: 7px;
+    margin-bottom: 5px;
+}
+
+.post-details p strong {
+    margin-right: 3px;
+}
+
+.comments {
+    display: block;
+    color: #777777;
+    font-size: 6.5px;
+    margin-bottom: 5px;
+}
+
+.post-time {
+    display: block;
+    color: #999999;
+    font-size: 6px;
+}
+.feed-screen {
+    background-color: #ffffff;
+}
+/* =========================
+   Second Post
+========================= */
+
+.second-post-image {
+    width: 100%;
+    height: 105px;
+
+    background: linear-gradient(
+        135deg,
+        #a85bb2,
+        #c05ab0
+    );
+}
+
+.second-post {
+    margin-bottom: 38px;
+}
+/* =========================
+   Screen 1 - Profile Badge
+========================= */
+
+.profile-picture {
+    position: relative;
+}
+
+.add-badge {
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+
+    width: 14px;
+    height: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2589e8;
+    color: #ffffff;
+
+    border: 1.5px solid #ffffff;
+    border-radius: 50%;
+
+    font-size: 10px;
+    line-height: 1;
+}
+
+
+/* =========================
+   Screen 1 - Profile Tabs (Flexbox)
+========================= */
+
+.profile-tabs {
+    display: flex;
+    border-top: 1px solid #eeeeee;
+}
+
+.tab {
+    flex: 1;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #aaaaaa;
+    border-bottom: 1.5px solid transparent;
+}
+
+.tab svg {
+    width: 11px;
+    height: 11px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.tab.active {
+    color: #111111;
+    border-bottom-color: #111111;
+}
+
+
+/* Profile grid: slightly shorter tiles so 2 rows fit after the tabs row */
+
+.post {
+    height: 58px;
+}
+
+
+/* =========================
+   Screen 2 - Story Ring
+========================= */
+
+/* White gap between the gradient circle and the pink ring */
+.story-circle:not(.your-story) {
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1.5px #f06b9c;
+}
+/* =========================
+   Screen 3 - Explore
+========================= */
+
+.explore-screen {
+    background-color: #ffffff;
+}
+
+
+/* Search row (Flexbox) */
+
+.explore-search {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px 6px;
+}
+
+.explore-search svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: #333333;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.search-box {
+    flex: 1;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 0 7px;
+    background-color: #efefef;
+    border-radius: 6px;
+
+    color: #888888;
+    font-size: 7px;
+}
+
+.search-box svg {
+    stroke: #888888;
+}
+
+
+/* Category tags (Flexbox) */
+
+.explore-tags {
+    display: flex;
+    gap: 5px;
+    padding: 0 8px 6px;
+    overflow: hidden;
+}
+
+.tag {
+    flex-shrink: 0;
+    padding: 3px 8px;
+
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    font-size: 6.5px;
+    color: #333333;
+    cursor: pointer;
+}
+
+
+/* Explore image grid (CSS Grid) */
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 62px;
+    gap: 2px;
+    padding-bottom: 34px;
+}
+
+.tile {
+    background: linear-gradient(135deg, #ffd28f, #f57bb5, #a95bb8);
+}
+
+/* Big and tall tiles */
+.tile-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.tile-7 {
+    grid-column: span 2;
+}
+
+.tile-8 {
+    grid-row: span 2;
+}
+
+/* Different shades */
+.tile-1  { background: linear-gradient(135deg, #ffcf91, #f08ab5); }
+.tile-2  { background: linear-gradient(135deg, #ffb98d, #f55eaa, #a55ab6); }
+.tile-3  { background: linear-gradient(135deg, #f9b5a7, #ef75ae); }
+.tile-4  { background: linear-gradient(135deg, #f6a7bc, #d65aa6); }
+.tile-5  { background: linear-gradient(135deg, #ff8fc0, #e0479f); }
+.tile-6  { background: linear-gradient(135deg, #ffbd9d, #c36ab2); }
+.tile-7  { background: linear-gradient(135deg, #ffd08c, #e86aaa, #b65cae); }
+.tile-8  { background: linear-gradient(135deg, #f5a2bf, #9561ad); }
+.tile-9  { background: linear-gradient(135deg, #ee79b4, #b65cae); }
+.tile-10 { background: linear-gradient(135deg, #ffb5a0, #d867ac); }

@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instagram Profile UI Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="instagram-container">
+
+        <!-- Screen 1: Profile -->
+        <section class="screen profile-screen">
+
+    <!-- Top Bar -->
+<header class="top-bar">
+
+    <!-- Phone Status Bar -->
+    <div class="status-bar">
+        <span>9:41</span>
+
+  <div class="status-icons">
+
+    <!-- Wi-Fi -->
+    <svg viewBox="0 0 24 24">
+        <path d="M3 8.5C8.5 4 15.5 4 21 8.5"/>
+        <path d="M6.5 12C10 9.2 14 9.2 17.5 12"/>
+        <path d="M10 15.5C11.2 14.6 12.8 14.6 14 15.5"/>
+        <circle cx="12" cy="19" r="1"/>
+    </svg>
+
+    <!-- Sound / Vibration -->
+    <svg viewBox="0 0 24 24">
+        <path d="M5 10v4h3l4 4V6l-4 4H5z"/>
+        <path d="M16 9c1.5 1.5 1.5 4.5 0 6"/>
+    </svg>
+
+    <!-- Battery -->
+    <svg viewBox="0 0 24 24">
+        <rect x="3" y="7" width="17" height="10" rx="2"/>
+        <path d="M21 10v4"/>
+        <rect x="5" y="9" width="11" height="6" rx="1"
+              fill="currentColor" stroke="none"/>
+    </svg>
+
+</div>
+
+</div>
+
+    <!-- Instagram App Bar -->
+    <div class="app-header">
+
+        <h1 class="instagram-logo">Instagram</h1>
+
+            <div class="header-icons">
+
+            <!-- Plus icon -->
+            <div class="notification-icon">
+                <svg viewBox="0 0 24 24">
+                    <rect x="4" y="4" width="16" height="16" rx="4"/>
+                    <path d="M12 8v8M8 12h8"/>
+                </svg>
+            </div>
+
+            <!-- Menu icon with red dot -->
+            <div class="notification-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 7h16M4 12h16M4 17h16"/>
+                </svg>
+                <span class="notification-dot"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+    <!-- Profile Information -->
+    <section class="profile-info">
+
+        <div class="profile-top">
+
+                      <div class="profile-picture">
+                <img src="images/profile.jpg" alt="Profile picture">
+                <span class="add-badge">+</span>
+            </div>
+
+            <div class="profile-stats">
+
+                <div class="stat">
+                    <strong>12</strong>
+                    <span>Posts</span>
+                </div>
+
+                <div class="stat">
+                    <strong>240</strong>
+                    <span>Followers</span>
+                </div>
+
+                <div class="stat">
+                    <strong>520</strong>
+                    <span>Following</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Username and Bio -->
+        <div class="profile-details">
+            <h2>aribaamir</h2>
+
+            <p>
+                Creative soul ♡<br>
+                Sharing little moments &amp; memories
+            </p>
+        </div>
+
+
+        <!-- Profile Buttons -->
+        <div class="profile-buttons">
+            <button>Follow</button>
+            <button>Message</button>
+            <button>Contact</button>
+        </div>
+
+    </section>
+
+
+    <!-- Story Highlights -->
+    <section class="highlights">
+
+        <div class="highlight">
+            <div class="highlight-circle"></div>
+            <span>Travel</span>
+        </div>
+
+        <div class="highlight">
+            <div class="highlight-circle"></div>
+            <span>Daily</span>
+        </div>
+
+        <div class="highlight">
+            <div class="highlight-circle"></div>
+            <span>Life</span>
+        </div>
+
+        <div class="highlight">
+            <div class="highlight-circle"></div>
+            <span>Love</span>
+        </div>
+
+    </section>
+    <!-- Profile Tabs -->
+<div class="profile-tabs">
+
+    <!-- Grid tab (active) -->
+    <a href="#" class="tab active">
+        <svg viewBox="0 0 24 24">
+            <rect x="4" y="4" width="7" height="7"/>
+            <rect x="13" y="4" width="7" height="7"/>
+            <rect x="4" y="13" width="7" height="7"/>
+            <rect x="13" y="13" width="7" height="7"/>
+        </svg>
+    </a>
+
+    <!-- Tagged tab -->
+    <a href="#" class="tab">
+        <svg viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <circle cx="12" cy="10" r="2.5"/>
+            <path d="M7.5 18c.8-2.2 2.5-3.2 4.5-3.2s3.7 1 4.5 3.2"/>
+        </svg>
+    </a>
+
+</div>
+<!-- Profile Posts Grid -->
+<section class="profile-posts">
+
+    <div class="post post-1"></div>
+    <div class="post post-2"></div>
+    <div class="post post-3"></div>
+
+    <div class="post post-4"></div>
+    <div class="post post-5"></div>
+    <div class="post post-6"></div>
+
+    <div class="post post-7"></div>
+    <div class="post post-8"></div>
+    <div class="post post-9"></div>
+
+</section>
+<!-- Bottom Navigation -->
+<nav class="bottom-nav">
+
+    <!-- Home -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+        </svg>
+    </a>
+
+    <!-- Search -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"/>
+            <path d="M16 16l5 5"/>
+        </svg>
+    </a>
+
+    <!-- Create -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="4"/>
+            <path d="M12 8v8M8 12h8"/>
+        </svg>
+    </a>
+
+    <!-- Notifications -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <path d="M20.8 8.8c0 5-8.8 10-8.8 10s-8.8-5-8.8-10A5.2 5.2 0 0 1 12 6.2a5.2 5.2 0 0 1 8.8 2.6z"/>
+        </svg>
+    </a>
+
+    <!-- Profile - ACTIVE on Screen 1 -->
+    <a href="#" class="nav-item active">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/>
+        </svg>
+    </a>
+
+</nav>
+</section>
+
+       <!-- Screen 2: Home Feed -->
+<section class="screen feed-screen">
+
+    <!-- Common Top Bar -->
+    <header class="top-bar">
+
+        <!-- Phone Status Bar -->
+        <div class="status-bar">
+            <span>9:41</span>
+
+            <div class="status-icons">
+
+    <!-- Wi-Fi -->
+    <svg viewBox="0 0 24 24">
+        <path d="M3 8.5C8.5 4 15.5 4 21 8.5"/>
+        <path d="M6.5 12C10 9.2 14 9.2 17.5 12"/>
+        <path d="M10 15.5C11.2 14.6 12.8 14.6 14 15.5"/>
+        <circle cx="12" cy="19" r="1"/>
+    </svg>
+
+    <!-- Sound / Vibration -->
+    <svg viewBox="0 0 24 24">
+        <path d="M5 10v4h3l4 4V6l-4 4H5z"/>
+        <path d="M16 9c1.5 1.5 1.5 4.5 0 6"/>
+    </svg>
+
+    <!-- Battery -->
+    <svg viewBox="0 0 24 24">
+        <rect x="3" y="7" width="17" height="10" rx="2"/>
+        <path d="M21 10v4"/>
+        <rect x="5" y="9" width="11" height="6" rx="1"
+              fill="currentColor" stroke="none"/>
+    </svg>
+
+</div>
+ </div> <!-- end status-bar -->
+        <!-- Instagram App Header -->
+        <div class="app-header">
+
+            <h1 class="instagram-logo">Instagram</h1>
+
+            <div class="header-icons">
+
+    <!-- Camera -->
+    <div class="notification-icon">
+        <svg viewBox="0 0 24 24">
+            <rect x="3" y="6" width="18" height="15" rx="3"/>
+            <path d="M8 6l1.5-2h5L16 6"/>
+            <circle cx="12" cy="13.5" r="4"/>
+        </svg>
+        <span class="notification-dot"></span>
+    </div>
+
+    <!-- Direct Message -->
+    <div class="notification-icon">
+        <svg viewBox="0 0 24 24">
+            <path d="M3 4l18 7-18 9 4-8z"/>
+            <path d="M7 12h8"/>
+        </svg>
+        <span class="notification-dot"></span>
+    </div>
+
+</div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Stories -->
+    <section class="stories">
+
+        <div class="story">
+            <div class="story-circle your-story">
+    <img src="images/profile.jpg" alt="Your profile picture">
+    <span>+</span>
+</div>
+            <span>Your story</span>
+        </div>
+
+        <div class="story">
+            <div class="story-circle"></div>
+            <span>aesthetic</span>
+        </div>
+
+        <div class="story">
+            <div class="story-circle"></div>
+            <span>travel</span>
+        </div>
+
+        <div class="story">
+            <div class="story-circle"></div>
+            <span>lifestyle</span>
+        </div>
+
+        <div class="story">
+            <div class="story-circle"></div>
+            <span>vibes</span>
+        </div>
+
+    </section>
+
+
+    <!-- Post -->
+    <article class="feed-post">
+
+        <!-- Post Header -->
+        <header class="post-header">
+
+            <div class="post-user">
+
+                <div class="small-profile-picture"></div>
+
+                <strong>aribaamir</strong>
+
+            </div>
+
+            <span class="post-menu">⋮</span>
+
+        </header>
+
+
+        <!-- Post Image -->
+        <div class="feed-post-image"></div>
+
+
+        <!-- Post Actions -->
+<div class="post-actions">
+
+    <div class="left-actions">
+
+        <!-- Like -->
+        <button class="action-icon liked">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.8 8.8c0 5-8.8 10-8.8 10s-8.8-5-8.8-10A5.2 5.2 0 0 1 12 6.2a5.2 5.2 0 0 1 8.8 2.6z"/>
+            </svg>
+        </button>
+
+        <!-- Comment -->
+        <button class="action-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 11.5a8 8 0 0 1-8 8 8.5 8.5 0 0 1-4.2-1.1L4 20l1.4-3.2A8 8 0 1 1 20 11.5z"/>
+            </svg>
+        </button>
+
+        <!-- Share -->
+        <button class="action-icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M21 3L10 14"/>
+                <path d="M21 3l-7 18-4-7-7-4z"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- Save -->
+    <button class="action-icon">
+        <svg viewBox="0 0 24 24">
+            <path d="M6 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18l-6-4-6 4z"/>
+        </svg>
+    </button>
+
+</div>
+
+
+        <!-- Post Details -->
+        <div class="post-details">
+
+            <strong>1,248 likes</strong>
+
+            <p>
+                <strong>aribaamir</strong>
+                Do what makes you happy ✨
+            </p>
+
+            <span class="comments">
+                View all 32 comments
+            </span>
+
+            <span class="post-time">
+                2 hours ago
+            </span>
+
+        </div>
+
+    </article>
+<!-- Second Post Preview -->
+<article class="feed-post second-post">
+
+    <header class="post-header">
+
+        <div class="post-user">
+
+            <div class="small-profile-picture"></div>
+
+            <strong>aribaamir</strong>
+
+        </div>
+
+              <span class="post-menu">⋮</span>
+
+    </header>
+
+    <div class="second-post-image"></div>
+
+</article>
+
+    <nav class="bottom-nav">
+
+    <!-- Home -->
+   <a href="#" class="nav-item active">
+        <svg viewBox="0 0 24 24">
+            <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+        </svg>
+    </a>
+
+    <!-- Search -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <circle cx="10.8" cy="10.8" r="6.8"/>
+            <path d="M16 16l5 5"/>
+        </svg>
+    </a>
+
+    <!-- Create -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="16" rx="4"/>
+            <path d="M12 8v8M8 12h8"/>
+        </svg>
+    </a>
+
+    <!-- Heart with Reaction Notification -->
+<a href="#" class="nav-item reaction-nav">
+
+    <span class="reaction-bubble">
+
+        <!-- White heart -->
+        <svg class="bubble-icon" viewBox="0 0 24 24">
+            <path d="M20.8 8.8c0 5-8.8 10-8.8 10s-8.8-5-8.8-10A5.2 5.2 0 0 1 12 6.2a5.2 5.2 0 0 1 8.8 2.6z"/>
+        </svg>
+
+        <!-- White comment -->
+        <svg class="bubble-icon" viewBox="0 0 24 24">
+            <path d="M20 11.5a8 8 0 0 1-8 8 8.5 8.5 0 0 1-4.4-1.2L4 20l1.6-3.5A8 8 0 1 1 20 11.5z"/>
+        </svg>
+
+    </span>
+
+    <!-- Heart icon in nav -->
+    <svg viewBox="0 0 24 24">
+        <path d="M20.8 8.8c0 5-8.8 10-8.8 10s-8.8-5-8.8-10A5.2 5.2 0 0 1 12 6.2a5.2 5.2 0 0 1 8.8 2.6z"/>
+    </svg>
+
+</a>
+    <!-- Profile -->
+    <a href="#" class="nav-item">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/>
+        </svg>
+    </a>
+
+</nav>
+
+</section>
+
+
+       <!-- Screen 3: Explore -->
+<section class="screen explore-screen">
+
+    <header class="top-bar">
+
+        <!-- Phone Status Bar -->
+        <div class="status-bar">
+            <span>9:41</span>
+
+            <div class="status-icons">
+
+                <!-- Wi-Fi -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 8.5C8.5 4 15.5 4 21 8.5"/>
+                    <path d="M6.5 12C10 9.2 14 9.2 17.5 12"/>
+                    <path d="M10 15.5C11.2 14.6 12.8 14.6 14 15.5"/>
+                    <circle cx="12" cy="19" r="1"/>
+                </svg>
+
+                <!-- Sound / Vibration -->
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 10v4h3l4 4V6l-4 4H5z"/>
+                    <path d="M16 9c1.5 1.5 1.5 4.5 0 6"/>
+                </svg>
+
+                <!-- Battery -->
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="7" width="17" height="10" rx="2"/>
+                    <path d="M21 10v4"/>
+                    <rect x="5" y="9" width="11" height="6" rx="1"
+                          fill="currentColor" stroke="none"/>
+                </svg>
+
+            </div>
+        </div> <!-- end status-bar -->
+
+        <!-- Search Row -->
+        <div class="explore-search">
+
+            <div class="search-box">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="10.8" cy="10.8" r="6.8"/>
+                    <path d="M16 16l5 5"/>
+                </svg>
+                <span>Search</span>
+            </div>
+
+            <!-- Scan icon -->
+            <svg viewBox="0 0 24 24">
+                <path d="M4 8V5a1 1 0 0 1 1-1h3"/>
+                <path d="M16 4h3a1 1 0 0 1 1 1v3"/>
+                <path d="M20 16v3a1 1 0 0 1-1 1h-3"/>
+                <path d="M8 20H5a1 1 0 0 1-1-1v-3"/>
+                <circle cx="12" cy="12" r="2.5"/>
+            </svg>
+
+        </div>
+
+    </header>
+
+
+    <!-- Category Tags -->
+    <section class="explore-tags">
+        <button class="tag">IGTV</button>
+        <button class="tag">Shop</button>
+        <button class="tag">Style</button>
+        <button class="tag">Sports</button>
+        <button class="tag">Music</button>
+    </section>
+
+
+    <!-- Explore Grid -->
+    <main class="explore-grid">
+        <div class="tile tile-1"></div>
+        <div class="tile tile-2"></div>
+        <div class="tile tile-3"></div>
+        <div class="tile tile-4"></div>
+        <div class="tile tile-5"></div>
+        <div class="tile tile-6"></div>
+        <div class="tile tile-7"></div>
+        <div class="tile tile-8"></div>
+        <div class="tile tile-9"></div>
+        <div class="tile tile-10"></div>
+    </main>
+
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+
+        <!-- Home -->
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>
+            </svg>
+        </a>
+
+        <!-- Search - ACTIVE on Screen 3 -->
+        <a href="#" class="nav-item active">
+            <svg viewBox="0 0 24 24">
+                <circle cx="10.8" cy="10.8" r="6.8"/>
+                <path d="M16 16l5 5"/>
+            </svg>
+        </a>
+
+        <!-- Create -->
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="4"/>
+                <path d="M12 8v8M8 12h8"/>
+            </svg>
+        </a>
+
+        <!-- Notifications -->
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24">
+                <path d="M20.8 8.8c0 5-8.8 10-8.8 10s-8.8-5-8.8-10A5.2 5.2 0 0 1 12 6.2a5.2 5.2 0 0 1 8.8 2.6z"/>
+            </svg>
+        </a>
+
+        <!-- Profile -->
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 21c0-4.2 3.6-7 8-7s8 2.8 8 7"/>
+            </svg>
+        </a>
+
+    </nav>
+
+</section>
+    </div>
+
+</body>
+</html>
