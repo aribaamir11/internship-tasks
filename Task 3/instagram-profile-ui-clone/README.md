@@ -4,7 +4,7 @@ A mobile-style Instagram UI clone built with **only HTML and CSS** (no JavaScrip
 This project is my **Internship Task 03**.
 
 - GitHub Repository: https://github.com/aribaamir11/internship-tasks
-- Live Demo: `PASTE_YOUR_NETLIFY_OR_VERCEL_LINK_HERE`
+- Live Demo: https://instagram-profile-ui-clone-chi.vercel.app/
 
 ---
 
