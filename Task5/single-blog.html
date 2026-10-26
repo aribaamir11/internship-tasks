@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup | Single Blog</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --brand:#6a5cff;
+    --brand-dark:#5644e0;
+    --ink:#0d0d14;
+    --ink-2:#14141f;
+    --sidebar-bg:#f4f3f8;
+    --text-muted:#7a7a7a;
+  }
+  body{ font-family:'Inter', sans-serif; color:#3c3c3c; margin:0; }
+  a{ text-decoration:none; }
+  h1,h2,h3,h4,h5{ font-family:'Poppins', sans-serif; font-weight:600; color:#1f1f1f; }
+
+  .site-navbar{ padding: 1rem 0; }
+  .site-navbar .navbar-brand{ color:#fff; }
+  .navbar-toggle-checkbox{ display:none; }
+  .navbar-toggle-btn{
+    display:none; flex-direction:column; gap:5px; cursor:pointer;
+    background:none; border:0; padding:6px; margin-left:auto;
+  }
+  .navbar-toggle-btn span{ width:24px; height:2px; background:#fff; display:block; }
+  .nav-list{
+    list-style:none; display:flex; align-items:center; gap:.25rem;
+    margin:0; padding:0; margin-left:auto;
+  }
+  .nav-list .nav-item{ position:relative; }
+  .nav-list .nav-link{ display:block; padding:.5rem 1rem; color:rgba(255,255,255,.75); font-weight:500; }
+  .nav-list .nav-link:hover, .nav-list .nav-link.active{ color:#fff; }
+  .has-dropdown > .nav-link::after{
+    content:""; display:inline-block; width:6px; height:6px;
+    border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+    transform:rotate(45deg); margin-left:6px;
+  }
+  .dropdown-panel{
+    position:absolute; top:100%; left:0; min-width:190px;
+    background: var(--ink-2); border-radius:.5rem; padding:.5rem 0;
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+    opacity:0; visibility:hidden; transform:translateY(6px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index:20;
+  }
+  .has-dropdown:hover .dropdown-panel,
+  .has-dropdown:focus-within .dropdown-panel{ opacity:1; visibility:visible; transform:translateY(0); }
+  .dropdown-panel a{ display:block; padding:.6rem 1.1rem; color:#d8d8dc; font-size:.9rem; }
+  .dropdown-panel a:hover{ color:#fff; background:rgba(255,255,255,.05); }
+  .say-hello{ color:#fff; border-bottom:2px solid var(--brand); padding-bottom:2px; font-weight:600; }
+
+  @media (max-width: 991.98px){
+    .navbar-toggle-btn{ display:flex; }
+    .nav-list{
+      position:fixed; top:70px; left:0; right:0; bottom:0;
+      background:var(--ink-2); flex-direction:column; align-items:stretch;
+      gap:0; padding:1rem 1.5rem 2rem; transform:translateX(100%);
+      transition:transform .25s ease; overflow-y:auto;
+    }
+    .navbar-toggle-checkbox:checked ~ .nav-list{ transform:translateX(0); }
+    .nav-list .nav-item{ border-bottom:1px solid rgba(255,255,255,.08); }
+    .nav-list .nav-link{ padding:1rem 0; }
+    .dropdown-panel{
+      position:static; opacity:1; visibility:visible; transform:none;
+      box-shadow:none; background:transparent; display:none; padding-left:1rem;
+    }
+    .has-dropdown:focus-within .dropdown-panel{ display:block; }
+    .say-hello{ display:inline-block; margin-top:1rem; }
+  }
+
+  .page-banner{
+  position:relative; min-height:420px; display:flex; align-items:center; overflow:hidden;
+  background: var(--ink-2);
+}
+.page-banner-photo{
+  position:absolute; inset:0;
+  background: url('hero.png') center/cover no-repeat;
+}
+.page-banner-overlay{
+  position:absolute; top:0; left:0; bottom:0; width:46%;
+  background: var(--ink-2);
+  clip-path: polygon(0 0, 85% 0, 78% 100%, 0% 100%);
+}
+.page-banner .container{ position:relative; z-index:2; }
+.page-banner h1{ color:#fff; font-weight:800; font-size:3rem; margin:0; }
+@media (max-width: 640px){
+  .page-banner-overlay{ width:100%; clip-path:none; background:rgba(20,20,31,.75); }
+}
+
+  .section-py{ padding: 4rem 0; }
+
+  .post-title{ font-size:1.9rem; line-height:1.3; margin-top:1.6rem; }
+  .post-meta{ color:var(--text-muted); font-size:.9rem; margin-bottom:1.2rem; }
+  .post-meta i{ margin-right:.3rem; }
+  .post-meta .divider{ margin:0 .6rem; }
+  .post-body p{ color:#6b6b6b; line-height:1.9; margin-bottom:1.4rem; }
+  blockquote.post-quote{ background:var(--sidebar-bg); padding:2rem; margin:1.6rem 0; }
+  blockquote.post-quote .inner{
+    background:#fff; border-left:3px solid var(--brand); padding:1.4rem 1.8rem;
+    font-style:italic; color:#8a8a8a; font-size:1.05rem; line-height:1.8;
+  }
+  .post-social{
+    display:flex; align-items:center; justify-content:space-between; padding:1.4rem 0;
+    border-top:1px solid #eee; border-bottom:1px solid #eee; margin:1.5rem 0 2rem;
+  }
+  .post-social .likes{ color:#3c3c3c; display:flex; align-items:center; gap:.6rem; }
+  .post-social .share a{ color:#aaa; margin-left:1.2rem; font-size:1rem; }
+  .post-social .share a:hover{ color:var(--brand); }
+  .post-nav{ display:flex; justify-content:space-between; align-items:center; padding-bottom:2rem; margin-bottom:2rem; border-bottom:1px solid #eee; }
+  .post-nav .nav-item-block{ display:flex; align-items:center; gap:1rem; }
+  .post-nav img{ width:70px; height:70px; object-fit:cover; border-radius:4px; }
+  .post-nav .label{ color:var(--text-muted); font-size:.85rem; display:block; margin-bottom:.2rem; }
+  .post-nav .title{ font-weight:600; color:#1f1f1f; }
+  .post-nav .next-block{ text-align:right; flex-direction:row-reverse; }
+  .post-nav .arrow-box{ width:44px; height:44px; border:1px solid #ddd; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#aaa; transition:.2s; }
+  .post-nav a:hover .arrow-box{ background:var(--brand); border-color:var(--brand); color:#fff; }
+
+  .author-box{ background:var(--sidebar-bg); padding:2rem; display:flex; gap:1.4rem; align-items:flex-start; margin-bottom:2.5rem; }
+  .author-box img{ width:80px; height:80px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+  .author-box p{ color:var(--text-muted); margin:0; line-height:1.8; }
+
+  .comment-item{ display:flex; gap:1.2rem; margin-bottom:1.8rem; }
+  .comment-item.reply{ margin-left:5rem; }
+  .comment-item img{ width:60px; height:60px; border-radius:50%; object-fit:cover; flex-shrink:0; }
+  .comment-item p{ color:#6b6b6b; margin-bottom:.5rem; line-height:1.8; }
+  .comment-meta{ display:flex; align-items:center; gap:1rem; font-size:.9rem; }
+  .comment-meta .name{ font-weight:600; color:#1f1f1f; }
+  .comment-meta .date{ color:#aaa; }
+  .comment-meta .reply-link{ margin-left:auto; color:#aaa; font-weight:600; letter-spacing:.5px; font-size:.8rem; }
+  .comment-meta .reply-link:hover{ color:var(--brand); }
+
+  .form-control{ border-radius:0; border:1px solid #e5e5e5; padding:.85rem 1rem; }
+  .form-control:focus{ border-color:var(--brand); box-shadow:none; }
+  .btn-outline-primary-custom{ border:1px solid var(--brand); color:var(--brand); background:transparent; padding:.8rem 2.2rem; font-weight:600; letter-spacing:.5px; transition:.25s; border-radius:0; }
+  .btn-outline-primary-custom:hover{ background:var(--brand); color:#fff; }
+  .btn-fill-primary-custom{ border:1px solid var(--brand); color:#fff; background:var(--brand); padding:.8rem 1.5rem; font-weight:600; letter-spacing:.5px; transition:.25s; border-radius:0; width:100%; }
+  .btn-fill-primary-custom:hover{ background:transparent; color:var(--brand); }
+
+  .widget{ background:var(--sidebar-bg); padding:1.8rem; margin-bottom:1.8rem; }
+  .widget-plain{ padding:0; background:transparent; }
+  .widget h5{ font-weight:600; margin-bottom:1.2rem; padding-bottom:.8rem; border-bottom:1px solid #e2e0e8; }
+  .search-box{ position:relative; }
+  .search-box input{ border-radius:0; border:1px solid #e5e2ec; padding:.85rem 2.6rem .85rem 1rem; }
+  .search-box i{ position:absolute; right:1rem; top:50%; transform:translateY(-50%); color:#aaa; }
+  .category-list{ list-style:none; padding:0; margin:1rem 0 0; }
+  .category-list li{ border-bottom:1px solid #e2e0e8; }
+  .category-list li:last-child{ border-bottom:none; }
+  .category-list a{ display:flex; justify-content:space-between; padding:.85rem 0; color:#3c3c3c; }
+  .category-list a:hover{ color:var(--brand); }
+  .recent-post{ display:flex; gap:1rem; align-items:center; margin-bottom:1.2rem; }
+  .recent-post:last-child{ margin-bottom:0; }
+  .recent-post img{ width:60px; height:60px; object-fit:cover; border-radius:4px; flex-shrink:0; }
+  .recent-post .title{ font-weight:600; font-size:.92rem; color:#1f1f1f; display:block; }
+  .recent-post .title:hover{ color:var(--brand); }
+  .recent-post .date{ font-size:.8rem; color:#aaa; }
+  .tag-cloud{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem; }
+  .tag-cloud a{ border:1px solid #e2e0e8; background:#fff; color:#3c3c3c; font-size:.85rem; padding:.5rem 1rem; }
+  .tag-cloud a:hover{ background:var(--brand); border-color:var(--brand); color:#fff; }
+  .insta-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; margin-top:1rem; }
+  .insta-grid img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
+
+  footer a{ transition: .3s; }
+  footer a:hover{ color: #6a5cff !important; }
+  footer .navbar-brand{ font-size:2rem; }
+  footer .bi{ font-size:18px; }
+
+  @media (max-width:991px){
+    .hero-content h1{ font-size:2.6rem; }
+    .post-nav .next-block{ text-align:left; flex-direction:row; }
+    .comment-item.reply{ margin-left:1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar site-navbar navbar-dark bg-ink" style="background-color:var(--ink-2);">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand fw-bold fs-4 brand-font" href="index.html#home">Startup<span class="text-brand" style="color:var(--brand);">.</span></a>
+
+    <input type="checkbox" id="navToggle" class="navbar-toggle-checkbox">
+    <label for="navToggle" class="navbar-toggle-btn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+      <li class="nav-item has-dropdown">
+        <a class="nav-link" href="#" tabindex="0">Pages</a>
+        <div class="dropdown-panel">
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#team">Our Team</a>
+          <a href="index.html#testimonials">Testimonials</a>
+        </div>
+      </li>
+      <li class="nav-item has-dropdown">
+        <a class="nav-link active" href="#" tabindex="0">Blog</a>
+        <div class="dropdown-panel">
+          <a href="blog.html">Blog</a>
+          <a href="single-blog.html">Single Blog</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      <li class="nav-item"><a href="index.html#contact" class="say-hello">Say Hello</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-banner">
+  <div class="page-banner-photo"></div>
+  <div class="page-banner-overlay"></div>
+  <div class="container">
+    <h1>Blog</h1>
+  </div>
+</section>
+
+<section class="section-py">
+  <div class="container">
+    <div class="row gy-5">
+
+      <div class="col-lg-8">
+
+        <img src="1.png" class="img-fluid w-100" style="max-height:460px;object-fit:cover;" alt="Post cover">
+
+        <h2 class="post-title">Second divided from form fish beast made every of seas all gathered us saying he our</h2>
+        <div class="post-meta">
+          <i class="bi bi-person"></i>Travel, Lifestyle
+          <span class="divider">|</span>
+          <i class="bi bi-chat"></i>03 Comments
+        </div>
+
+        <div class="post-body">
+          <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.</p>
+          <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually</p>
+
+          <blockquote class="post-quote">
+            <div class="inner">
+              MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
+            </div>
+          </blockquote>
+
+          <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower</p>
+          <p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually</p>
+        </div>
+
+        <div class="post-social">
+          <div class="likes"><i class="bi bi-heart-fill"></i> Lily and 4 people like this</div>
+          <div class="share">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-dribbble"></i></a>
+            <a href="#"><i class="bi bi-behance"></i></a>
+          </div>
+        </div>
+
+        <div class="post-nav">
+          <a href="blog.html" class="nav-item-block prev-block">
+            <img src="prev.png" alt="Prev post">
+            <div>
+              <span class="label">Prev Post</span>
+              <span class="title">Space The Final Frontier</span>
+            </div>
+          </a>
+          <a href="blog.html" class="nav-item-block next-block">
+            <div>
+              <span class="label">Next Post</span>
+              <span class="title">Telescopes 101</span>
+            </div>
+            <img src="next.png" alt="Next post">
+            <span class="arrow-box"><i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <div class="author-box">
+          <img src="milan.png" alt="Author">
+          <div>
+            <h5>Harvard Milan</h5>
+            <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he our dominion. Second divided from</p>
+          </div>
+        </div>
+
+        <h4 class="comments-title mb-4">05 Comments</h4>
+
+        <div class="comment-item">
+          <img src="blunt1.png" alt="Commenter">
+          <div class="w-100">
+            <p>Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
+            <div class="comment-meta">
+              <span class="name">Emily Blunt</span>
+              <span class="date">December 4, 2025 at 3:12 pm</span>
+              <a href="#" class="reply-link">REPLY</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-item reply">
+          <img src="blunt2.png" alt="Commenter">
+          <div class="w-100">
+            <p>Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
+            <div class="comment-meta">
+              <span class="name">Emily Blunt</span>
+              <span class="date">December 4, 2025 at 3:12 pm</span>
+              <a href="#" class="reply-link">REPLY</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <img src="blunt3.png" alt="Commenter">
+          <div class="w-100">
+            <p>Multiply sea night grass fourth day sea lesser rule open subdue female fill which them Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser</p>
+            <div class="comment-meta">
+              <span class="name">Emily Blunt</span>
+              <span class="date">December 4, 2025 at 3:12 pm</span>
+              <a href="#" class="reply-link">REPLY</a>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="reply-form-title mt-5 mb-4">Leave a Reply</h4>
+        <form class="row g-3">
+          <div class="col-12"><textarea class="form-control" rows="5" placeholder="Write Comment"></textarea></div>
+          <div class="col-md-6"><input type="text" class="form-control" placeholder="Name"></div>
+          <div class="col-md-6"><input type="email" class="form-control" placeholder="Email"></div>
+          <div class="col-12"><input type="text" class="form-control" placeholder="Website"></div>
+          <div class="col-12"><button type="submit" class="btn btn-outline-primary-custom">SEND MESSAGE</button></div>
+        </form>
+
+      </div>
+
+      <div class="col-lg-4">
+
+        <div class="widget widget-plain">
+          <div class="search-box">
+            <input type="text" class="form-control" placeholder="Search Keyword">
+            <i class="bi bi-search"></i>
+          </div>
+          <button class="btn btn-fill-primary-custom mt-3">SEARCH</button>
+        </div>
+
+        <div class="widget">
+          <h5>Category</h5>
+          <ul class="category-list">
+            <li><a href="#">Restaurant food(37)</a></li>
+            <li><a href="#">Travel news(10)</a></li>
+            <li><a href="#">Modern technology(03)</a></li>
+            <li><a href="#">Product(11)</a></li>
+            <li><a href="#">Inspiration(21)</a></li>
+            <li><a href="#">Health Care(09)</a></li>
+          </ul>
+        </div>
+
+        <div class="widget">
+          <h5>Recent Post</h5>
+          <div class="recent-post">
+            <img src="rec1.png" alt="">
+            <div><a href="single-blog.html" class="title">From life was you fish...</a><span class="date">January 12, 2026</span></div>
+          </div>
+          <div class="recent-post">
+            <img src="rec2.png" alt="">
+            <div><a href="single-blog.html" class="title">The Amazing Hubble</a><span class="date">02 Hours ago</span></div>
+          </div>
+          <div class="recent-post">
+            <img src="rec3.png" alt="">
+            <div><a href="single-blog.html" class="title">Astronomy Or Astrology</a><span class="date">03 Hours ago</span></div>
+          </div>
+          <div class="recent-post">
+            <img src="rec4.png" alt="">
+            <div><a href="single-blog.html" class="title">Asteroids telescope</a><span class="date">01 Hours ago</span></div>
+          </div>
+        </div>
+
+        <div class="widget">
+          <h5>Tag Clouds</h5>
+          <div class="tag-cloud">
+            <a href="#">project</a><a href="#">love</a><a href="#">technology</a><a href="#">travel</a>
+            <a href="#">restaurant</a><a href="#">life style</a><a href="#">design</a><a href="#">illustration</a>
+          </div>
+        </div>
+
+        <div class="widget widget-plain">
+          <h5>Instagram Feeds</h5>
+          <div class="insta-grid">
+            <img src="ins1.png" alt="">
+            <img src="ins2.png" alt="">
+            <img src="ins3.png" alt="">
+            <img src="ins4.png" alt="">
+            <img src="ins5.png" alt="">
+            <img src="ins6.png" alt="">
+          </div>
+        </div>
+
+        <div class="widget newsletter-widget">
+          <h5>Newsletter</h5>
+          <input type="email" class="form-control mb-3" placeholder="Enter email">
+          <button class="btn btn-outline-primary-custom w-100">SUBSCRIBE</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-white py-5" style="background-color:var(--ink);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-2 text-center text-lg-start mb-3 mb-lg-0">
+        <a href="index.html#home" class="navbar-brand fw-bold fs-3 brand-font text-white">Startup<span style="color:var(--brand);">.</span></a>
+      </div>
+      <div class="col-lg-7 text-center mb-3 mb-lg-0">
+        <a href="index.html#about" class="text-white-50 mx-3">About</a>
+        <a href="index.html#services" class="text-white-50 mx-3">Services</a>
+        <a href="index.html#portfolio" class="text-white-50 mx-3">Portfolio</a>
+        <a href="blog.html" class="text-white-50 mx-3">Blog</a>
+        <a href="single-blog.html" class="text-white-50 mx-3">Single Blog</a>
+        <a href="index.html#contact" class="text-white-50 mx-3">Contact</a>
+      </div>
+      <div class="col-lg-3 text-center text-lg-end">
+        <a href="#" class="text-white-50 mx-2"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-white-50 mx-2"><i class="bi bi-twitter-x fs-5"></i></a>
+        <a href="#" class="text-white-50 mx-2"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="#" class="text-white-50 mx-2"><i class="bi bi-google fs-5"></i></a>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <p class="text-center text-white-50 mb-0">Copyright &copy;2026 All rights reserved | This template is made by Asma</p>
+  </div>
+</footer>
+
+</body>
+</html>
