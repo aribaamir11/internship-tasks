@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catchub</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #222222;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    h1, h2 {
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin: 0 0 12px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+        color: #777777;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* ===== Hero ===== */
+
+    .hero {
+        background: #eeeeee;
+        padding: 60px 40px;
+    }
+
+    .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        flex: 1 1 320px;
+        text-align: center;
+    }
+
+    .hero-text img.logo {
+        margin: 0 auto 16px;
+        width: 220px;
+    }
+
+    .hero-screens {
+        flex: 1 1 320px;
+        text-align: center;
+    }
+
+    .buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .buttons img {
+        width: 170px;
+        margin: 8px;
+        display: inline-block;
+    }
+
+    /* ===== Content sections ===== */
+
+    .section {
+        padding: 90px 40px;
+    }
+
+    .section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .section-inner.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .gray {
+        background: #eeeeee;
+    }
+
+    .content {
+        flex: 1 1 320px;
+    }
+
+    .content p {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .image {
+        flex: 1 1 320px;
+        text-align: center;
+    }
+
+    .image img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .icons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .icons img {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    /* ===== Download / Contact / Footer ===== */
+
+    .download,
+    .contact,
+    .footer {
+        text-align: center;
+        background: #eeeeee;
+    }
+
+    .download {
+        padding: 50px 20px 30px;
+    }
+
+    .download p {
+        color: #222222;
+        margin-bottom: 10px;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+    .contact p {
+        color: #222222;
+    }
+
+    .contact a {
+        color: #5fa9ff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer img {
+        width: 60px;
+        margin: 0 auto;
+    }
+
+    /* ===== Responsive ===== */
+
+    @media (max-width: 700px) {
+        h1, h2 {
+            font-size: 21px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 60px 24px;
+        }
+
+        .section-inner.reverse {
+            flex-direction: column;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-inner">
+
+        <div class="hero-text">
+            <img class="logo" src="logo.png" alt="Catchub logo">
+            <h1>WATCH. COMMUNICATE. CREATE.</h1>
+            <p>Everything you need to socialise</p>
+
+            <div class="buttons">
+                <a href="#"><img src="play_store.png" alt="Get it on Google Play"></a>
+                <a href="#"><img src="app_store.png" alt="Download on the App Store"></a>
+            </div>
+        </div>
+
+        <div class="hero-screens">
+            <img src="top_screens.png" alt="Catchub app screens">
+        </div>
+
+    </div>
+</header>
+
+<!-- CHANNELS -->
+<section class="section">
+    <div class="section-inner">
+
+        <div class="image">
+            <img src="sec_screens.png" alt="Channels screen in the Catchub app">
+        </div>
+
+        <div class="content">
+            <h2>Channels</h2>
+            <p>Enjoy the videos and music you love. Create your own business or entertainment channel.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MESSAGES -->
+<section class="section gray">
+    <div class="section-inner reverse">
+
+        <div class="image">
+            <img src="thhh_screens.png" alt="Messages screen in the Catchub app">
+        </div>
+
+        <div class="content">
+            <h2>Messages</h2>
+            <p>Communicate seamlessly. Create your own professional or social group chat.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FUTURE -->
+<section class="section">
+    <div class="section-inner">
+
+        <div class="image">
+            <img src="for_screens.png" alt="Upcoming Catchub features">
+        </div>
+
+        <div class="content">
+            <div class="icons">
+                <img src="vectors.png" alt="Icons showing upcoming features">
+            </div>
+            <h2>In Future</h2>
+            <p>Communicate seamlessly. Create your own professional or social group chat.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download">
+    <p>For download click here:</p>
+    <div class="buttons">
+        <a href="#"><img src="play_store.png" alt="Get it on Google Play" style="width:150px"></a>
+        <a href="#"><img src="app_store.png" alt="Download on the App Store" style="width:150px"></a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <p>Any questions? Feel free to <a href="#">contact us</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <img src="peratude.png" alt="Catchub footer logo">
+</footer>
+
+</body>
+</html>
