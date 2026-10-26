@@ -1,0 +1,89 @@
+ <section id="home" class="section hero">
+    <div class="container hero-center">
+
+        <img src="./Assests/main-avatar.png" alt="profile" class="avatar">
+
+        <h1>
+        I build modern web apps 
+        <span>that stand out</span>
+        </h1>
+
+        <p>
+        Computer Science graduate (CGPA: 3.72) focused on frontend development
+        and building real-world projects.
+        </p>
+
+        <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
+    </div>
+    </section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container about">
+        <h2>About Me</h2>
+        <p>I am Mubashir Nadeem, a Computer Science graduate with a CGPA of 3.72.</p>
+        <p>I am currently learning frontend development and building real-world projects.</p>
+        <p>I believe in learning by building clean and responsive applications.</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <div class="container">
+        <h2>My Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">Responsive Design</div>
+            <div class="skill-card">JavaScript (Basic)</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2>My Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive personal portfolio using HTML & CSS.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>To-Do App (Coming Soon)</h3>
+                <p>Task manager using JavaScript.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Me</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+
+        <p>*Form functionality coming soon</p>
+
+        <div class="contact-links">
+            <a href="mailto:mubashirfreelancer8962@gmail.com">Email</a>
+            <a href="https://github.com/Mubashir-Nadeem1" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</section>
