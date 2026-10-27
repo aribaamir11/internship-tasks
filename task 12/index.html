@@ -3,193 +3,196 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>StartUp</title>
+  <title>Ariba Studio – Colourful Digital Design</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/startup2.css" rel="stylesheet">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-3">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="120" tabindex="0">
+
+  <nav class="navbar navbar-expand-lg fixed-top" id="topNav">
     <div class="container">
-      <a class="navbar-brand" href="#home"><img src="assets/startup2/logo.png" alt="Startup" width="131" height="36"></a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand brand" href="#home"><span class="brand-dot"></span>Ariba<span class="brand-light">.studio</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list fs-2"></i></button>
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto gap-lg-4">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <ul class="navbar-nav mx-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
-            <ul class="dropdown-menu"><li><a class="dropdown-item" href="#about">About</a></li><li><a class="dropdown-item" href="#team">Team</a></li></ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Blog</a>
-            <ul class="dropdown-menu"><li><a class="dropdown-item" href="#testimonial">Blog</a></li><li><a class="dropdown-item" href="#testimonial">Single Blog</a></li></ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <a class="say-hello text-white text-decoration-none d-none d-lg-inline-block" href="#contact">Say Hello</a>
+        <a class="btn btn-grad rounded-pill px-4" href="#contact">Say Hello</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <section id="home" class="hero-section d-flex align-items-center text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <h1 class="display-2 fw-normal mb-5">Startup you can build a<br class="d-none d-md-block"> website online using the<br class="d-none d-md-block"> Bootstrap builder.</h1>
-            <a class="btn btn-primary rounded-pill px-5 py-3" href="#portfolio">Visit Our Works</a>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="pill-tag"><i class="bi bi-stars"></i> Creative studio by Ariba</span>
+            <h1 class="hero-title mt-4">We design <span id="typed" class="typed">brands</span><span class="caret">|</span><br>people love to click.</h1>
+            <p class="lead text-secondary mt-4 mb-5">Bright ideas, clean code and colourful design, from a first sketch to a live website.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-grad btn-lg rounded-pill px-5" href="#portfolio">See my work</a>
+              <a class="btn btn-outline-ink btn-lg rounded-pill px-5" href="#contact">Start a project</a>
+            </div>
           </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="hero-art">
+              <div class="art-card c1"><i class="bi bi-palette2"></i><b>Design</b></div>
+              <div class="art-card c2"><i class="bi bi-code-slash"></i><b>Code</b></div>
+              <div class="art-card c3"><i class="bi bi-phone"></i><b>Apps</b></div>
+              <div class="art-card c4"><i class="bi bi-heart-fill"></i><b>Joy</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 stats mt-5">
+          <div class="col-6 col-md-3"><div class="stat"><span class="count" data-to="120">0</span>+<small>Projects done</small></div></div>
+          <div class="col-6 col-md-3"><div class="stat"><span class="count" data-to="48">0</span><small>Happy clients</small></div></div>
+          <div class="col-6 col-md-3"><div class="stat"><span class="count" data-to="9">0</span><small>Awards won</small></div></div>
+          <div class="col-6 col-md-3"><div class="stat"><span class="count" data-to="20">0</span>+<small>Years of ideas</small></div></div>
         </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="section-space">
       <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-7">
-            <span class="section-label">Services</span>
-            <h2 class="display-5 mt-3">With more than 20 years of experience we can deliver the best product design.</h2>
-          </div>
+        <div class="text-center mx-auto mb-5 narrow">
+          <h2 class="section-title">What we make for you</h2>
+          <p class="text-secondary">Pick a service to see what is included.</p>
         </div>
-        <div class="row g-4 pt-4">
-          <div class="col-md-4">
-            <div class="card service-card h-100 text-center border rounded-0 p-5">
-              <img class="mx-auto mb-4" src="assets/startup2/icons/1.svg" alt="" width="58" height="56">
-              <h3 class="h4">Graphic design</h3>
-              <p class="text-secondary mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card service-card h-100 text-center border rounded-0 p-5">
-              <img class="mx-auto mb-4" src="assets/startup2/icons/2.svg" alt="" width="56" height="56">
-              <h3 class="h4">Web design</h3>
-              <p class="text-secondary mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card service-card h-100 text-center border rounded-0 p-5">
-              <img class="mx-auto mb-4" src="assets/startup2/icons/3.svg" alt="" width="59" height="56">
-              <h3 class="h4">Mobile app</h3>
-              <p class="text-secondary mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="container-fluid px-0 bg-dark text-white">
-      <div class="row g-0 align-items-stretch">
-        <div class="col-lg-6 about-photo"></div>
-        <div class="col-lg-6 d-flex align-items-center">
-          <div class="p-5 p-xl-7">
-            <span class="section-label">About Us</span>
-            <h2 class="display-5 mt-3 mb-4">Empowering individuals</h2>
-            <p class="lead">Efficiently unleash cross-media tour function information without cross action media value. Quickly maximize timely deliverables for real-time schemas.</p>
-            <p class="text-white-50 mb-5">“Function information without cross action media value.</p>
-            <a class="btn btn-primary rounded-pill px-5 py-3" href="#about">About Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section-space">
-      <div class="container text-center mb-5">
-        <span class="section-label">Portfolio</span>
-        <h2 class="display-5 mt-3">Featured Works</h2>
-        <p class="text-secondary mx-auto portfolio-intro">Tour function information without cross action media value quickly maximize timely deliverables.</p>
-      </div>
-      <div class="container-fluid px-lg-5">
         <div class="row g-4">
-          <div class="col-lg-8"><div class="portfolio-item portfolio-wide" style="background-image:url('https://preview.colorlib.com/theme/startup2/img/portfolio/1.png')"><div><span>App Design</span><h3>Colorlib Mobile App</h3></div></div></div>
-          <div class="col-lg-4"><div class="portfolio-item" style="background-image:url('assets/startup2/portfolio/2.png')"><div><span>App Design</span><h3>Colorlib Mobile App</h3></div></div></div>
-          <div class="col-lg-4"><div class="portfolio-item portfolio-short" style="background-image:url('assets/startup2/portfolio/3.png')"><div><span>App Design</span><h3>Colorlib Mobile App</h3></div></div></div>
-          <div class="col-lg-4"><div class="portfolio-item portfolio-short" style="background-image:url('assets/startup2/portfolio/4.png')"><div><span>App Design</span><h3>Colorlib Mobile App</h3></div></div></div>
-          <div class="col-lg-4"><div class="portfolio-item portfolio-short" style="background-image:url('assets/startup2/portfolio/5.png')"><div><span>App Design</span><h3>Colorlib Mobile App</h3></div></div></div>
+          <div class="col-md-4"><button class="service-card s-coral" data-title="Graphic design" data-text="Logos, posters, social media kits and brand guides, all in a palette that fits you." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-brush"></i><h3>Graphic design</h3><p>Logos, posters and brand kits that get noticed.</p><span class="more">Learn more</span></button></div>
+          <div class="col-md-4"><button class="service-card s-violet" data-title="Web design" data-text="Fast, responsive websites built with Bootstrap, from landing pages to full portfolios." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-window-stack"></i><h3>Web design</h3><p>Responsive sites that look great on every screen.</p><span class="more">Learn more</span></button></div>
+          <div class="col-md-4"><button class="service-card s-mint" data-title="Mobile app" data-text="Simple app screens and prototypes you can tap through before anything is built." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-phone-fill"></i><h3>Mobile app</h3><p>App screens and prototypes you can tap through.</p><span class="more">Learn more</span></button></div>
         </div>
       </div>
     </section>
 
-    <section class="section-space pt-0">
+    <!-- ABOUT -->
+    <section id="about" class="section-space about">
       <div class="container">
         <div class="row align-items-center g-5">
-          <div class="col-lg-5">
-            <h2 class="display-5">How we work</h2>
-            <p class="lead mt-4">“Function information without cross action media value.</p>
-            <p class="text-secondary">Efficiently unleash cross-media tour function information without cross action media value. Quickly maximize timely deliverables for real-time schemas.</p>
-            <a class="text-dark text-decoration-none d-inline-flex align-items-center gap-3 mt-3" href="#portfolio"><span class="play-button"><i class="bi bi-play-fill"></i></span> Watch Video</a>
+          <div class="col-lg-6">
+            <div class="about-art"><div class="ring r1"></div><div class="ring r2"></div><div class="about-badge"><b>20+</b><span>years of<br>experience</span></div></div>
           </div>
-          <div class="col-lg-7">
-            <div class="work-video d-flex align-items-center justify-content-center">
-              <span class="play-button play-button-lg"><i class="bi bi-play-fill"></i></span>
-            </div>
+          <div class="col-lg-6">
+            <h2 class="section-title text-white">Empowering individuals with colour and code</h2>
+            <p class="lead text-white-50 mt-4">We turn rough ideas into polished products. Every project starts with a conversation and ends with something you are proud to show.</p>
+            <ul class="checks">
+              <li><i class="bi bi-check-circle-fill"></i> Clear pricing, no surprises</li>
+              <li><i class="bi bi-check-circle-fill"></i> Weekly previews you can click</li>
+              <li><i class="bi bi-check-circle-fill"></i> Support after launch</li>
+            </ul>
+            <a class="btn btn-sun rounded-pill px-5 py-3 mt-3" href="#contact">Work with us</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="team" class="section-space bg-light">
-      <div class="container text-center">
-        <span class="section-label">Team</span>
-        <h2 class="display-5 mt-3">Our Creative Team</h2>
-        <p class="text-secondary mx-auto portfolio-intro mb-5">Tour function information without cross action media value quickly maximize timely deliverables.</p>
-        <div class="row g-4">
-          <div class="col-6 col-lg-3"><img class="img-fluid w-100" src="assets/startup2/team/1.png" alt="Brandon Yeald"><h3 class="h5 mt-4">Brandon Yeald</h3><span class="text-secondary">Founder &amp; CEO</span></div>
-          <div class="col-6 col-lg-3"><img class="img-fluid w-100" src="assets/startup2/team/2.png" alt="Calvin Anderson"><h3 class="h5 mt-4">Calvin Anderson</h3><span class="text-secondary">Graphics Designer</span></div>
-          <div class="col-6 col-lg-3"><img class="img-fluid w-100" src="assets/startup2/team/3.png" alt="Roman Solo"><h3 class="h5 mt-4">Roman Solo</h3><span class="text-secondary">Wordpress Developer</span></div>
-          <div class="col-6 col-lg-3"><img class="img-fluid w-100" src="assets/startup2/team/4.png" alt="Yeald Kin"><h3 class="h5 mt-4">Yeald Kin</h3><span class="text-secondary">Software Engineer</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonial" class="testimonial-section text-white text-center d-flex align-items-center">
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section-space">
       <div class="container">
-        <img src="assets/startup2/testimonial/quote.svg" alt="" width="48" class="mb-4">
-        <blockquote class="display-6 mx-auto">Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.</blockquote>
-        <img class="rounded-circle mt-4" src="assets/startup2/testimonial/thumb.png" alt="Robert Thomson" width="64" height="64">
-        <h3 class="h6 mt-3 mb-1">Robert Thomson</h3>
-        <small>Business Owner</small>
+        <div class="text-center mx-auto mb-4 narrow">
+          <h2 class="section-title">Featured works</h2>
+          <p class="text-secondary">Filter by type, then click a project to open it.</p>
+        </div>
+        <div class="filters text-center mb-5">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="app">App</button>
+          <button class="chip" data-filter="web">Web</button>
+          <button class="chip" data-filter="brand">Brand</button>
+        </div>
+        <div class="row g-4" id="grid">
+          <div class="col-md-6 col-lg-4 work" data-cat="app"><button class="tile t1" data-title="Plantly App" data-text="A plant-care app with watering reminders and a friendly leaf-green interface." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-flower2"></i><span>App</span><h3>Plantly App</h3></button></div>
+          <div class="col-md-6 col-lg-4 work" data-cat="web"><button class="tile t2" data-title="Sunday Café Website" data-text="Menu, booking form and an online order page for a neighbourhood café." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-cup-hot"></i><span>Web</span><h3>Sunday Café</h3></button></div>
+          <div class="col-md-6 col-lg-4 work" data-cat="brand"><button class="tile t3" data-title="Bloom Brand Kit" data-text="Logo, colours, packaging and social templates for a flower shop." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-balloon-heart"></i><span>Brand</span><h3>Bloom Kit</h3></button></div>
+          <div class="col-md-6 col-lg-4 work" data-cat="app"><button class="tile t4" data-title="FitPulse Tracker" data-text="Workout tracking with charts, streaks and playful badges." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-activity"></i><span>App</span><h3>FitPulse</h3></button></div>
+          <div class="col-md-6 col-lg-4 work" data-cat="web"><button class="tile t5" data-title="Orbit Portfolio" data-text="A bold personal portfolio for a photographer with a full-screen gallery." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-camera"></i><span>Web</span><h3>Orbit Portfolio</h3></button></div>
+          <div class="col-md-6 col-lg-4 work" data-cat="brand"><button class="tile t6" data-title="Mango Juice Branding" data-text="Label design and a sunny identity for a cold-pressed juice brand." data-bs-toggle="modal" data-bs-target="#infoModal"><i class="bi bi-cup-straw"></i><span>Brand</span><h3>Mango Juice</h3></button></div>
+        </div>
       </div>
     </section>
 
+    <!-- TEAM -->
+    <section id="team" class="section-space bg-soft">
+      <div class="container text-center">
+        <h2 class="section-title">Our creative team</h2>
+        <p class="text-secondary mx-auto narrow mb-5">Small team, big ideas.</p>
+        <div class="row g-4">
+          <div class="col-6 col-lg-3"><div class="member"><div class="avatar a1">AR</div><h3>Ariba</h3><span>Founder &amp; Creative Lead</span><div class="soc"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div></div></div>
+          <div class="col-6 col-lg-3"><div class="member"><div class="avatar a2">SK</div><h3>Sana Khan</h3><span>Graphic Designer</span><div class="soc"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div></div></div>
+          <div class="col-6 col-lg-3"><div class="member"><div class="avatar a3">HA</div><h3>Hamza Ali</h3><span>Web Developer</span><div class="soc"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div></div></div>
+          <div class="col-6 col-lg-3"><div class="member"><div class="avatar a4">ZF</div><h3>Zoya Fatima</h3><span>App Designer</span><div class="soc"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-linkedin"></i></a></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonial" class="testi">
+      <div class="container">
+        <div id="quotes" class="carousel slide mx-auto narrow-lg" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner text-center">
+            <div class="carousel-item active"><i class="bi bi-quote q"></i><p class="quote">They turned our messy idea into a website our customers actually enjoy using.</p><b>Robert Thomson</b><small>Business Owner</small></div>
+            <div class="carousel-item"><i class="bi bi-quote q"></i><p class="quote">Fast, friendly and so creative. Our brand finally feels like us.</p><b>Maryam Noor</b><small>Shop Owner</small></div>
+            <div class="carousel-item"><i class="bi bi-quote q"></i><p class="quote">The app prototype got our investors excited in the first meeting.</p><b>Daniel Cruz</b><small>Startup Founder</small></div>
+          </div>
+          <div class="carousel-indicators static-dots"><button type="button" data-bs-target="#quotes" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button><button type="button" data-bs-target="#quotes" data-bs-slide-to="1" aria-label="Slide 2"></button><button type="button" data-bs-target="#quotes" data-bs-slide-to="2" aria-label="Slide 3"></button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="section-space">
       <div class="container">
-        <div class="text-center mb-5">
-          <span class="section-label">Contact</span>
-          <h2 class="display-5 mt-3">Get in Touch</h2>
-          <p class="text-secondary mx-auto portfolio-intro">Tour function information without cross action media value quickly maximize timely deliverables.</p>
+        <div class="text-center mx-auto mb-5 narrow">
+          <h2 class="section-title">Get in touch</h2>
+          <p class="text-secondary">Tell us about your idea. We reply within one working day.</p>
         </div>
-        <form class="row g-4 mx-auto contact-form">
-          <div class="col-md-6"><input class="form-control rounded-0 py-3" type="text" placeholder="Your Name"></div>
-          <div class="col-md-6"><input class="form-control rounded-0 py-3" type="email" placeholder="Email"></div>
-          <div class="col-12"><input class="form-control rounded-0 py-3" type="text" placeholder="Subject"></div>
-          <div class="col-12"><textarea class="form-control rounded-0" rows="6" placeholder="Message"></textarea></div>
-          <div class="col-12"><button class="btn btn-primary rounded-0 w-100 py-3" type="submit">Send Message</button></div>
+        <form id="contactForm" class="row g-3 mx-auto contact-form" novalidate>
+          <div class="col-md-6"><label class="form-label" for="name">Your name</label><input class="form-control" id="name" type="text" required><div class="invalid-feedback">Please enter your name.</div></div>
+          <div class="col-md-6"><label class="form-label" for="email">Email</label><input class="form-control" id="email" type="email" required><div class="invalid-feedback">Please enter a valid email.</div></div>
+          <div class="col-12"><label class="form-label" for="subject">Subject</label><input class="form-control" id="subject" type="text" required><div class="invalid-feedback">Please add a subject.</div></div>
+          <div class="col-12"><label class="form-label" for="message">Message</label><textarea class="form-control" id="message" rows="5" required minlength="10"></textarea><div class="invalid-feedback">Message needs at least 10 characters.</div></div>
+          <div class="col-12"><button class="btn btn-grad w-100 py-3 rounded-pill" type="submit">Send message</button></div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="bg-dark text-white pt-5">
+  <footer class="footer">
     <div class="container py-5">
       <div class="row align-items-center gy-4">
-        <div class="col-lg-2"><img src="assets/startup2/logo.png" alt="Startup" width="131" height="36"></div>
-        <div class="col-lg-7">
-          <ul class="nav justify-content-lg-center">
-            <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li><li class="nav-item"><a class="nav-link text-white" href="#services">Services</a></li><li class="nav-item"><a class="nav-link text-white" href="#portfolio">Portfolio</a></li><li class="nav-item"><a class="nav-link text-white" href="#">Pages</a></li><li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li><li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 text-lg-end">
-          <a class="social-link" href="#"><i class="bi bi-facebook"></i></a><a class="social-link" href="#"><i class="bi bi-twitter-x"></i></a><a class="social-link" href="#"><i class="bi bi-instagram"></i></a><a class="social-link" href="#"><i class="bi bi-google"></i></a>
-        </div>
+        <div class="col-lg-3"><a class="navbar-brand brand" href="#home"><span class="brand-dot"></span>Ariba<span class="brand-light">.studio</span></a></div>
+        <div class="col-lg-6"><ul class="nav justify-content-lg-center"><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#services">Services</a></li><li class="nav-item"><a class="nav-link" href="#portfolio">Work</a></li><li class="nav-item"><a class="nav-link" href="#team">Team</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li></ul></div>
+        <div class="col-lg-3 text-lg-end"><a class="social-link" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a class="social-link" href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a class="social-link" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a></div>
       </div>
     </div>
-    <div class="border-top border-secondary border-opacity-25 py-4 text-center text-white-50">Copyright &copy;2026 All rights reserved | This template is made with <i class="bi bi-heart"></i> by <span class="text-primary">Mubashir Nadeem</span></div>
+    <div class="copy py-4 text-center">Copyright &copy; 2026 Ariba. All rights reserved. Made with <i class="bi bi-heart-fill"></i> by Ariba</div>
   </footer>
 
+  <!-- Info modal -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+      <div class="modal-header border-0"><h3 class="modal-title h4" id="infoTitle"></h3><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body pt-0"><p id="infoText" class="mb-0 text-secondary"></p></div>
+      <div class="modal-footer border-0"><a href="#contact" class="btn btn-grad rounded-pill px-4" data-bs-dismiss="modal">Ask about this</a></div>
+    </div></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="okToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite"><div class="d-flex"><div class="toast-body">Message sent. Thank you, we will reply soon.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button></div></div></div>
+
+  <button id="toTop" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
