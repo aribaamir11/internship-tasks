@@ -21,13 +21,17 @@ body {
     line-height: 1.55;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin: 0;
     color: var(--black);
 }
+
+/* ======================================================
+   SUBMISSION PAGE (submission.html)
+====================================================== */
 
 /* ===== Header ===== */
 
@@ -320,8 +324,6 @@ h1, h2 {
     font-size: 12px;
 }
 
-/* ===== Responsive ===== */
-
 @media (max-width: 860px) {
     .submission-panel {
         grid-template-columns: 1fr;
@@ -348,5 +350,229 @@ h1, h2 {
     .award-option {
         grid-template-columns: 20px 1fr;
         padding: 14px;
+    }
+}
+
+
+/* ======================================================
+   HOME PAGE (index.html)
+====================================================== */
+
+.mobile-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== Shared red-corner panel style ===== */
+
+.red-corner {
+    position: relative;
+    background: var(--black);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.red-corner::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 160px;
+    height: 160px;
+    background: var(--red);
+    transform: rotate(45deg);
+}
+
+/* ===== Intro panel ===== */
+
+.intro-panel {
+    padding: 56px 32px 48px;
+    text-align: center;
+}
+
+.intro-logo {
+    height: 44px;
+    margin-bottom: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-panel h1 {
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-panel h2 {
+    color: var(--red);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 26px;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-panel p {
+    max-width: 640px;
+    margin: 0 auto 16px;
+    color: #cdc9c3;
+    font-size: 14.5px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== "Submit Your Entry" link ===== */
+
+a[href="submission.html"] {
+    display: block;
+    width: fit-content;
+    margin: 32px auto;
+    padding: 14px 36px;
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background: var(--red);
+    border-radius: 3px;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+a[href="submission.html"]:hover {
+    background: var(--red-dark);
+    transform: translateY(-1px);
+}
+
+/* ===== Club groups ===== */
+
+.club-groups {
+    padding: 10px 24px 40px;
+}
+
+.club-group {
+    margin-bottom: 40px;
+}
+
+.club-group h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    color: var(--black);
+    margin-bottom: 18px;
+}
+
+.club-group h3 span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: var(--red);
+    border-radius: 2px;
+}
+
+.club-row {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+}
+
+.club-card {
+    flex: 0 0 160px;
+    scroll-snap-align: start;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 14px;
+    text-align: center;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.club-card:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+}
+
+.club-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin: 0 auto 12px;
+    display: block;
+}
+
+.club-card strong {
+    display: block;
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.club-card small {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ===== Launch panel (footer) ===== */
+
+.launch-panel {
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.launch-panel h2 {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+
+@media (min-width: 720px) {
+    .club-row {
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
+    .club-card {
+        flex: 1 1 calc(20% - 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-panel {
+        padding: 44px 22px 36px;
+    }
+
+    .intro-panel h1 {
+        font-size: 28px;
+    }
+
+    .intro-panel p {
+        font-size: 13.5px;
+    }
+
+    .club-groups {
+        padding: 6px 18px 30px;
+    }
+
+    .launch-panel h2 {
+        font-size: 17px;
     }
 }
