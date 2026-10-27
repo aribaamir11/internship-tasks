@@ -1,130 +1,24 @@
 "use strict";
 
 const products = [
-  {
-    id: 1,
-    name: "Nova Lounge Chair",
-    category: "Chair",
-    price: 289,
-    oldPrice: 340,
-    image: "assets/images/chair-nova.jpg",
-    badge: "New",
-    material: "Boucle"
-  },
-  {
-    id: 2,
-    name: "Cane Accent Chair",
-    category: "Chair",
-    price: 329,
-    oldPrice: null,
-    image: "assets/images/chair-cane.jpg",
-    badge: "Bestseller",
-    material: "Velvet"
-  },
-  {
-    id: 3,
-    name: "Form Side Chair",
-    category: "Chair",
-    price: 179,
-    oldPrice: 220,
-    image: "assets/images/chair-curve.jpg",
-    badge: "20% off",
-    material: "Oak"
-  },
-  {
-    id: 4,
-    name: "Olive Three Seat Sofa",
-    category: "Sofa",
-    price: 1290,
-    oldPrice: 1490,
-    image: "assets/images/sofa-olive.jpg",
-    badge: "Limited",
-    material: "Velvet"
-  },
-  {
-    id: 5,
-    name: "Luna Linen Sofa",
-    category: "Sofa",
-    price: 1190,
-    oldPrice: null,
-    image: "assets/images/sofa-luna.jpg",
-    badge: "New",
-    material: "Linen"
-  },
-  {
-    id: 6,
-    name: "Cloud Modular Sofa",
-    category: "Sofa",
-    price: 1495,
-    oldPrice: 1695,
-    image: "assets/images/sofa-cloud.jpg",
-    badge: "Studio pick",
-    material: "Wool blend"
-  },
-  {
-    id: 7,
-    name: "Arden Side Table",
-    category: "Table",
-    price: 249,
-    oldPrice: null,
-    image: "assets/images/table-oak.jpg",
-    badge: "New",
-    material: "Natural oak"
-  },
-  {
-    id: 8,
-    name: "Milo Dining Table",
-    category: "Table",
-    price: 780,
-    oldPrice: 890,
-    image: "assets/images/dining-room.jpg",
-    badge: "12% off",
-    material: "Solid ash"
-  },
-  {
-    id: 9,
-    name: "Studio Coffee Table",
-    category: "Table",
-    price: 369,
-    oldPrice: null,
-    image: "assets/images/living-room.jpg",
-    badge: "Bestseller",
-    material: "Travertine"
-  },
-  {
-    id: 10,
-    name: "Arc Pendant Light",
-    category: "Lighting",
-    price: 219,
-    oldPrice: 260,
-    image: "assets/images/lamp-arc.jpg",
-    badge: "15% off",
-    material: "Brushed brass"
-  },
-  {
-    id: 11,
-    name: "Halo Floor Lamp",
-    category: "Lighting",
-    price: 310,
-    oldPrice: null,
-    image: "assets/images/bedroom.jpg",
-    badge: "New",
-    material: "Steel"
-  },
-  {
-    id: 12,
-    name: "Aster Table Lamp",
-    category: "Lighting",
-    price: 145,
-    oldPrice: null,
-    image: "assets/images/hero.jpg",
-    badge: "Studio pick",
-    material: "Ceramic"
-  }
+  { id: 1, name: "Nova Lounge Chair", category: "Chair", price: 289, oldPrice: 340, image: "assets/images/chair.png", badge: "New", material: "Boucle" },
+  { id: 2, name: "Form Side Chair", category: "Chair", price: 179, oldPrice: 220, image: "assets/images/chair-3.png", badge: "20% off", material: "Oak" },
+  { id: 3, name: "Olive Three Seat Sofa", category: "Sofa", price: 1290, oldPrice: 1490, image: "assets/images/sofa.png", badge: "Limited", material: "Velvet" },
+  { id: 4, name: "Milo Dining Table", category: "Table", price: 780, oldPrice: 890, image: "assets/images/table.png", badge: "12% off", material: "Solid ash" },
+  { id: 5, name: "Arden Side Table", category: "Table", price: 249, oldPrice: null, image: "assets/images/table-2.png", badge: "New", material: "Natural oak" },
+  { id: 6, name: "Arc Pendant Light", category: "Lighting", price: 219, oldPrice: 260, image: "assets/images/lighting.png", badge: "15% off", material: "Brushed brass" },
+  { id: 7, name: "Halo Floor Lamp", category: "Lighting", price: 310, oldPrice: null, image: "assets/images/lighting-3.png", badge: "New", material: "Steel" },
+  { id: 8, name: "Aster Table Lamp", category: "Lighting", price: 145, oldPrice: null, image: "assets/images/lightnig-2.png", badge: "Studio pick", material: "Ceramic" },
+  { id: 9, name: "Glow Lantern", category: "Lighting", price: 189, oldPrice: null, image: "assets/images/lighting-4.png", badge: "Bestseller", material: "Glass" },
+  { id: 10, name: "Oak Wall Clock", category: "Clock", price: 95, oldPrice: 120, image: "assets/images/clock.png", badge: "Sale", material: "Oak" },
+  { id: 11, name: "Round Desk Clock", category: "Clock", price: 69, oldPrice: null, image: "assets/images/clock-2.png", badge: "New", material: "Metal" },
+  { id: 12, name: "Terra Flower Pot", category: "Decor", price: 39, oldPrice: null, image: "assets/images/Flower%20pot.png", badge: "Bestseller", material: "Ceramic" }
 ];
 
 const categories = ["All", ...new Set(products.map((product) => product.category))];
 const storageKey = "furnitur-cart";
+const wishKey = "furnitur-wishlist";
+const freeShipping = 250;
 
 const productGrid = document.querySelector(".product-grid");
 const filterTabs = document.querySelector(".filter-tabs");
@@ -145,6 +39,14 @@ const toast = document.querySelector(".toast");
 const menuButton = document.querySelector(".menu-button");
 const mobileNav = document.querySelector(".mobile-nav");
 
+const sortSelect = document.querySelector("#sort-select");
+const siteHeader = document.querySelector(".site-header");
+const toTop = document.querySelector(".to-top");
+const shipNote = document.querySelector(".ship-note");
+const shipBar = document.querySelector(".ship-bar i");
+
+let sortMode = "featured";
+let wishlist = loadWishlist();
 let activeCategory = "All";
 let searchTerm = "";
 let cart = loadCart();
@@ -161,6 +63,25 @@ function loadCart() {
   } catch (error) {
     return [];
   }
+}
+
+function loadWishlist() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(wishKey));
+    return Array.isArray(saved) ? saved : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function toggleWish(productId) {
+  const product = products.find((item) => item.id === productId);
+  if (!product) return;
+  const has = wishlist.includes(productId);
+  wishlist = has ? wishlist.filter((id) => id !== productId) : [...wishlist, productId];
+  try { localStorage.setItem(wishKey, JSON.stringify(wishlist)); } catch (error) {}
+  renderProducts();
+  showToast(has ? `${product.name} removed from favourites` : `${product.name} saved to favourites`);
 }
 
 function saveCart() {
@@ -197,11 +118,16 @@ function renderFilters() {
 function getFilteredProducts() {
   const normalizedTerm = searchTerm.trim().toLowerCase();
 
-  return products.filter((product) => {
+  const list = products.filter((product) => {
     const categoryMatches = activeCategory === "All" || product.category === activeCategory;
     const searchMatches = product.name.toLowerCase().includes(normalizedTerm);
     return categoryMatches && searchMatches;
   });
+
+  if (sortMode === "low") list.sort((a, b) => a.price - b.price);
+  if (sortMode === "high") list.sort((a, b) => b.price - a.price);
+  if (sortMode === "name") list.sort((a, b) => a.name.localeCompare(b.name));
+  return list;
 }
 
 function productCardTemplate(product) {
@@ -210,6 +136,9 @@ function productCardTemplate(product) {
       <div class="product-media">
         <img src="${product.image}" alt="${product.name}" loading="lazy">
         <span class="product-badge">${product.badge}</span>
+        <button class="wish-button${wishlist.includes(product.id) ? " active" : ""}" type="button" data-wish-id="${product.id}" aria-label="Save ${product.name} to favourites" aria-pressed="${wishlist.includes(product.id)}">
+          <svg><use href="#icon-heart"></use></svg>
+        </button>
         <div class="product-actions">
           <button class="add-to-cart" type="button" data-add-id="${product.id}">
             Add to cart
@@ -322,6 +251,10 @@ function renderCart() {
   cartCount.textContent = totalQuantity;
   cartTotal.textContent = formatCurrency(totalPrice);
   cartDrawer.classList.toggle("is-empty", cart.length === 0);
+
+  const left = freeShipping - totalPrice;
+  shipNote.textContent = left > 0 ? `Add ${formatCurrency(left)} more for free delivery` : "You have free delivery";
+  shipBar.style.width = `${Math.min(100, (totalPrice / freeShipping) * 100)}%`;
 }
 
 function openCart() {
@@ -353,6 +286,11 @@ filterTabs.addEventListener("click", (event) => {
 });
 
 productGrid.addEventListener("click", (event) => {
+  const wishButton = event.target.closest("[data-wish-id]");
+  if (wishButton) {
+    toggleWish(Number(wishButton.dataset.wishId));
+    return;
+  }
   const addButton = event.target.closest("[data-add-id]");
   if (!addButton) return;
   addToCart(Number(addButton.dataset.addId));
@@ -451,6 +389,31 @@ document.addEventListener("keydown", (event) => {
     mobileNav.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
   }
+});
+
+sortSelect.addEventListener("change", () => {
+  sortMode = sortSelect.value;
+  renderProducts();
+});
+
+window.addEventListener("scroll", () => {
+  siteHeader.classList.toggle("scrolled", window.scrollY > 10);
+  toTop.classList.toggle("visible", window.scrollY > 600);
+});
+
+toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+// Highlight the nav link of the section on screen
+const navLinks = document.querySelectorAll(".desktop-nav a");
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
+  });
+}, { rootMargin: "-40% 0px -55% 0px" });
+["top", "collection", "rooms", "story", "journal"].forEach((id) => {
+  const el = document.getElementById(id);
+  if (el) sectionObserver.observe(el);
 });
 
 renderFilters();

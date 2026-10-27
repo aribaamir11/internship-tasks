@@ -59,6 +59,9 @@
       <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path>
       <path d="m9 12 2 2 4-4"></path>
     </symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+      <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z"></path>
+    </symbol>
     <symbol id="icon-minus" viewBox="0 0 24 24">
       <path d="M5 12h14"></path>
     </symbol>
@@ -116,7 +119,7 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-image" role="img" aria-label="Modern living room with sculptural furniture" style="background-image: url('Hero img.jpg');"></div>
+      <div class="hero-image" role="img" aria-label="Modern living room with sculptural furniture" style="background-image: url('assets/images/Hero%20img.jpg');"></div>
       <div class="hero-shade"></div>
       <div class="hero-content shell">
         <p class="eyebrow">Collection 2026</p>
@@ -194,7 +197,16 @@
 
       <div class="collection-toolbar">
         <div class="filter-tabs" role="tablist" aria-label="Product categories"></div>
-        <p class="result-count" aria-live="polite"></p>
+        <div class="toolbar-right">
+          <p class="result-count" aria-live="polite"></p>
+          <label class="sr-only" for="sort-select">Sort products</label>
+          <select id="sort-select" class="sort-select">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="name">Name A to Z</option>
+          </select>
+        </div>
       </div>
 
       <div class="product-grid" aria-live="polite"></div>
@@ -323,12 +335,15 @@
     </div>
     <div class="cart-summary">
       <div><span>Subtotal</span><strong class="cart-total">$0.00</strong></div>
-      <p>Shipping and taxes calculated at checkout.</p>
+      <p class="ship-note"></p>
+      <div class="ship-bar" aria-hidden="true"><i></i></div>
+      <p>Taxes calculated at checkout.</p>
       <button class="button button-dark checkout-button" type="button">Proceed to checkout</button>
       <button class="clear-cart" type="button">Clear bag</button>
     </div>
   </aside>
 
+  <button class="to-top" type="button" aria-label="Back to top"><svg><use href="#icon-arrow"></use></svg></button>
   <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
