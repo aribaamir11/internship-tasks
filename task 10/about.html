@@ -3,82 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalog-Z About page</title>
+  <title>Ariba | About</title>
   <link rel="stylesheet" href="fontawesome/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <i class="fas fa-film"></i>
-      <span>Catalog-Z</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a class="nav-link nav-photos" href="index.html">Photos</a>
-      <a class="nav-link nav-videos" href="videos.html">Videos</a>
-      <a class="nav-link nav-about active" href="about.html">About</a>
-      <a class="nav-link nav-contact" href="contact.html">Contact</a>
-    </nav>
+    <div class="header-inner">
+      <a class="brand" href="index.html"><i class="fas fa-camera-retro"></i><span>Ariba</span></a>
+      <nav class="nav" id="nav" aria-label="Main menu">
+        <a href="index.html">Photos</a>
+        <a href="videos.html">Videos</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div style="display:flex;gap:10px">
+        <button class="icon-btn" id="theme-btn" aria-label="Theme"></button>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero image-hero" aria-label="Catalog-Z hero"></section>
+  <main class="wrap">
+    <h1 class="page-title">Hi, main <span>Ariba</span> hoon</h1>
+    <p class="lead">Yeh meri personal photo aur video gallery hai, jahan main woh lamhe jama karti hoon jo mujhe pasand aate hain.</p>
 
-    <section class="content about-page">
-      <h1>About Catalog-Z Website Template</h1>
-
-      <div class="about-intro">
-        <img src="about.jpg" alt="People working together">
-        <div class="about-text">
-          <p>You may support TemplateMo website by making <a href="https://paypal.me/templatemo">a small contribution</a> via PayPal. This will be helpful for us. We hope you like this Catalog-Z photo / video template for your website. We are making new templates regularly for you. Please come back and visit our <a href="https://templatemo.com">TemplateMo website</a> again.</p>
-          <p>Credits go to Pexels and Unsplash for photos and video used in this template. Catalog-Z is free <a href="https://v5.getbootstrap.com/">Bootstrap 5</a> Alpha 2 HTML Template designed for video and photo websites.</p>
-          <p>You are <b>allowed</b> to use this template for your commercial or non-commercial websites. You can integrate it with any kind of CMS website. You are <b>NOT allowed</b> to redistribute the downloadable template ZIP file on any template collection website. Please <a href="https://templatemo.com/contact">contact us</a> for more information. Thank you.</p>
-        </div>
+    <section class="about-intro">
+      <img src="about.jpg" alt="About Ariba">
+      <div>
+        <h2 style="margin-bottom:14px">Meri kahani</h2>
+        <p>Mujhe tasveerein aur videos banana pasand hai. Har photo mein ek chhoti si kahani hoti hai, kabhi subah ki roshni, kabhi shehar ki hulchul.</p>
+        <p>Is website par aap meri latest photos aur videos dekh sakte hain, unhein search kar sakte hain, category ke hisaab se filter kar sakte hain aur jo pasand aaye usay like kar sakte hain.</p>
+        <a class="btn" href="contact.html"><i class="fas fa-paper-plane"></i> Rabta karein</a>
       </div>
+    </section>
 
-      <div class="two-columns">
-        <article>
-          <h2>Left side of 2-Column content</h2>
-          <p>Pellentesque urna odio, scelerisque eu mauris vitae, vestibulum sodales neque. Ut augue justo, tincidunt nec aliquet ac, cursus vel augue. Suspendisse vel quam imperdiet, sodales tellus sed, ullamcorper lorem.</p>
-          <p>Suspendisse id consequat risus. Aliquam varius posuere nunc, nec imperdiet neque condimentum at. Aenean porta eleifend venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        </article>
-        <article>
-          <h2>Right-side Title goes here</h2>
-          <p>Pellentesque urna odio, scelerisque eu mauris vitae, vestibulum sodales neque. Ut augue justo, tincidunt nec aliquet ac, cursus vel augue. Suspendisse vel quam imperdiet, sodales tellus sed, ullamcorper lorem.</p>
-          <p>Suspendisse id consequat risus. Aliquam varius posuere nunc, nec imperdiet neque condimentum at. Aenean porta eleifend venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        </article>
-      </div>
+    <section class="stats">
+      <div class="stat"><b data-count="16">0</b>Photos</div>
+      <div class="stat"><b data-count="16">0</b>Videos</div>
+      <div class="stat"><b data-count="5000">0</b>Visitors</div>
+      <div class="stat"><b data-count="1200">0</b>Likes</div>
+    </section>
 
-      <div class="feature-row">
-        <article>
-          <div class="feature-icon"><i class="fas fa-desktop"></i></div>
-          <h2>Three-column title one</h2>
-          <p>Integer tristique arcu scelerisque mauris posuere convallis. Fusce egestas ipsum sapien, hendrerit ultricies nisi viverra eget. Vestibulum in tortor eget elit rutrum interdum.</p>
-          <p>Cras auctor velit urna, et feugiat ex tincidunt ut. Sed viverra, elit at pulvinar tristique, sem quam vehicula dolor, sed scelerisque augue mauris non dolor.</p>
-        </article>
-        <article>
-          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h2>Title two of three-column</h2>
-          <p>Donec nec est tincidunt, rhoncus nulla sit amet, imperdiet augue. Phasellus sodales placerat ipsum ac auctor. Mauris molestie blandit turpis. Mauris ante tellus, feugiat nec metus non, bibendum semper velit.</p>
-          <a class="primary-button" href="#">Read More</a>
-        </article>
-        <article>
-          <div class="feature-icon"><i class="fas fa-photo-video"></i></div>
-          <h2>Third Title goes here</h2>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec nec est tincidunt, rhoncus nulla sit amet, imperdiet augue.</p>
-          <p>Phasellus sodales placerat ipsum ac auctor. Mauris molestie blandit turpis. Mauris ante tellus, feugiat nec metus non, bibendum semper velit.</p>
-        </article>
-      </div>
+    <section class="features">
+      <div class="feature"><i class="fas fa-bolt"></i><h3>Fast &amp; Smooth</h3><p>Page tezi se khulte hain aur animations bilkul smooth chalte hain.</p></div>
+      <div class="feature"><i class="fas fa-mobile-alt"></i><h3>Har screen par</h3><p>Mobile, tablet ya laptop, website har jagah achi dikhti hai.</p></div>
+      <div class="feature"><i class="fas fa-palette"></i><h3>Light &amp; Dark mode</h3><p>Upar ke button se apni pasand ka theme chun lein.</p></div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <section class="footer-about"><h2>About Catalog-Z</h2><p>Catalog-Z is free Bootstrap 5 Alpha 2 HTML Template for video and photo websites. You can freely use this TemplateMo layout for a front-end integration with any kind of CMS website.</p></section>
-      <section class="footer-links"><h2>Our Links</h2><a href="#">Advertise</a><a href="#">Support</a><a href="#">Our Company</a><a href="#">Contact</a></section>
-      <section class="footer-social"><div class="social-links"><a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a><a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://pinterest.com" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a></div><div class="policy-links"><a href="#">Terms of Use</a><a href="#">Privacy Policy</a></div></section>
+    <div class="socials">
+      <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://pinterest.com" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
     </div>
-    <div class="copyright"><p>Copyright 2020 Catalog-Z Company. All rights reserved.</p><p>Designed by <a href="https://templatemo.com">TemplateMo</a></p></div>
+    <p>&copy; <span id="year"></span> Ariba. All rights reserved.</p>
   </footer>
+  <button class="to-top" id="to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="script.js"></script>
 </body>
 </html>
