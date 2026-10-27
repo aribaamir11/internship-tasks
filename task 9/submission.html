@@ -4,69 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Card Submission</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="submission-body">
+
+  <header class="submission-header">
+    <img src="redCard (1)/redCard/logo.png" alt="Red Card logo">
+  </header>
+
   <main class="submission-page">
-    <header class="submission-header">
-      <img src="redCard (1)/redCard/logo.png" alt="Red Card logo">
-    </header>
 
     <section class="submission-panel">
+
       <div class="submission-copy">
+        <span class="eyebrow">Red Card 2018</span>
         <h1>Submission</h1>
-        <p>All details of submissions will be kept strictly private and confidential by Mailman and will not be used for any purpose other than judging Red Card 2018 winners.</p>
-        <h2>Applications will close on the<br>15th December 2017</h2>
+        <p>All details of submissions will be kept strictly private and confidential by Mailman, and will not be used for any purpose other than judging Red Card 2018 winners.</p>
+
+        <div class="deadline-box">
+          <span class="deadline-label">Applications close</span>
+          <span class="deadline-date">15th December 2017</span>
+        </div>
       </div>
 
       <form class="submission-form">
-        <label class="form-field">
-          <span>Name</span>
-          <input type="text" name="name">
-        </label>
-        <label class="form-field">
-          <span>Email Address</span>
-          <input type="email" name="email">
-        </label>
-        <label class="form-field">
-          <span>Organisation</span>
-          <input type="text" name="organisation">
-        </label>
 
-        <div class="award-heading">
-          <h2>Which Award</h2>
-          <p>(Please tick and provide details for all of the awards you would like to be nominated for)</p>
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
         </div>
 
-        <div class="award-option">
-          <label class="check-line"><input type="checkbox" checked> <span>Best Livestream</span></label>
-          <span class="tiny-box"></span>
-          <textarea aria-label="Best Livestream description">Description &amp; Results (max. 150 words)</textarea>
-        </div>
-        <div class="award-option">
-          <label class="check-line"><input type="checkbox"> <span>Best Tour Campaign</span></label>
-          <span class="tiny-box"></span>
-          <textarea aria-label="Best Tour Campaign description">Description &amp; Results (max. 150 words)</textarea>
-        </div>
-        <div class="award-option">
-          <label class="check-line"><input type="checkbox"> <span>Best Sponsor Activation</span></label>
-          <span class="tiny-box"></span>
-          <textarea aria-label="Best Sponsor Activation description">Description &amp; Results (max. 150 words)</textarea>
-        </div>
-        <div class="award-option">
-          <label class="check-line"><input type="checkbox"> <span>Best Use of Technology</span></label>
-          <span class="tiny-box"></span>
-          <textarea aria-label="Best Use of Technology description">Description &amp; Results (max. 150 words)</textarea>
-        </div>
-        <div class="award-option">
-          <label class="check-line"><input type="checkbox"> <span>Best Online Campaign</span></label>
-          <span class="tiny-box"></span>
-          <textarea aria-label="Best Online Campaign description">Description &amp; Results (max. 150 words)</textarea>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email">
         </div>
 
-        <button type="submit" class="success-button"><span>&#10003;</span>Submission Successful</button>
+        <div class="form-field">
+          <label for="organisation">Organisation</label>
+          <input type="text" id="organisation" name="organisation">
+        </div>
+
+        <fieldset class="award-group">
+          <legend>
+            <h2>Which award</h2>
+            <p>Tick and provide details for every award you would like to be nominated for.</p>
+          </legend>
+
+          <label class="award-option">
+            <input type="checkbox" checked>
+            <span class="check-box" aria-hidden="true"></span>
+            <span class="award-body">
+              <span class="award-name">Best Livestream</span>
+              <textarea aria-label="Best Livestream description" placeholder="Description &amp; results (max. 150 words)"></textarea>
+            </span>
+          </label>
+
+          <label class="award-option">
+            <input type="checkbox">
+            <span class="check-box" aria-hidden="true"></span>
+            <span class="award-body">
+              <span class="award-name">Best Tour Campaign</span>
+              <textarea aria-label="Best Tour Campaign description" placeholder="Description &amp; results (max. 150 words)"></textarea>
+            </span>
+          </label>
+
+          <label class="award-option">
+            <input type="checkbox">
+            <span class="check-box" aria-hidden="true"></span>
+            <span class="award-body">
+              <span class="award-name">Best Sponsor Activation</span>
+              <textarea aria-label="Best Sponsor Activation description" placeholder="Description &amp; results (max. 150 words)"></textarea>
+            </span>
+          </label>
+
+          <label class="award-option">
+            <input type="checkbox">
+            <span class="check-box" aria-hidden="true"></span>
+            <span class="award-body">
+              <span class="award-name">Best Use of Technology</span>
+              <textarea aria-label="Best Use of Technology description" placeholder="Description &amp; results (max. 150 words)"></textarea>
+            </span>
+          </label>
+
+          <label class="award-option">
+            <input type="checkbox">
+            <span class="check-box" aria-hidden="true"></span>
+            <span class="award-body">
+              <span class="award-name">Best Online Campaign</span>
+              <textarea aria-label="Best Online Campaign description" placeholder="Description &amp; results (max. 150 words)"></textarea>
+            </span>
+          </label>
+
+        </fieldset>
+
+        <button type="submit" class="success-button">
+          <span class="tick" aria-hidden="true">&#10003;</span>
+          Submission Successful
+        </button>
+
       </form>
+
     </section>
+
   </main>
+
 </body>
 </html>
